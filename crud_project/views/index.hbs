@@ -1,0 +1,46 @@
+{{>header}}
+<title>CRUD Home</title>
+{{>navbar}}
+<div class="container my-3 formslider">
+    <h4 class="bg-primary text-center text-light p-2">Employee Details</h4>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <th>Emp_Id</th>
+                <th>EmpName</th>
+                <th>Department</th>
+                <th>Email</th>
+                <th>Date of Birth</th>
+                <th>Phone</th>
+                <th>Designation</th>
+                <th>Salary</th>
+                <th>City</th>
+                
+               
+                <th>Edit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+                {{#each data}}
+                    <tr>
+                        <td>{{_id}}</td>
+                        <td>{{empname}}</td>
+                        <td>{{dept}}</td>
+                        <td>{{email}}</td>
+                        <td>{{date}}</td>
+                        <td>{{phone}}</td>
+                        <td>{{desg}}</td>
+                        <td>{{salary}}</td>
+                        <td>{{city}}</td>
+                  
+                    
+                        <td><a href="/update/{{_id}}"><span class="material-symbols-outlined">edit</span></a></td>
+                    <td><a href="/delete/{{_id}}"><span class="material-symbols-outlined text-danger">delete_forever</span></a></td>
+                    </tr>
+                {{/each}}
+
+            </tbody>
+        </table>
+    </div>
+</div>
+{{>footer}}

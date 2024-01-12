@@ -1,0 +1,63 @@
+{{>header}}
+<title>CRUD Add</title>
+{{>navbar}}
+
+<div class="container my-3">
+    <h4 class="bg-primary text-center text-light p-2">Update Records</h4>
+    <form action="" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label>Employee's Name</label>
+            <input type="text" name="empname" required placeholder="Enter Full Name" class="form-control"
+                value={{data.empname}}>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>Department</label>
+                <input type="text" name="dept" required placeholder="Enter Department" class="form-control"
+                    value={{data.dept}}>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>Email</label>
+                <input type="email" name="email" required placeholder="Enter email-id" class="form-control"
+                    value={{data.email}}>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Date of Birth</label>
+                <input type="Date" name="date" required placeholder="Enter  date" class="form-control"
+                    value={{data.date}}>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>Designation</label>
+                <input type="text" name="desg" required placeholder="Enter Post" class="form-control"
+                    value={{data.desg}}>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>Salary</label>
+                <input type="text" name="salary" required placeholder="Enter Salary" class="form-control"
+                    value={{data.salary}}>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>Phone</label>
+                <input type="phone" name="phone" required placeholder="Enter Contact Number" class="form-control"
+                    value={{data.phone}}>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>City</label>
+                <input type="text" name="city" required placeholder="Enter City" class="form-control"
+                    value={{data.city}}>
+            </div>
+               
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </div>
+    </form>
+</div>
+
+{{>footer}}
